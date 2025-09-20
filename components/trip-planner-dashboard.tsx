@@ -223,43 +223,43 @@ export function TripPlannerDashboard() {
       )}
 
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <Card className="border-l-4 border-l-primary">
-            <CardContent className="flex items-center gap-3 p-4">
-              <Target className="w-6 h-6 text-primary" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-6">
+          <Card className="border-l-2 border-l-primary h-20">
+            <CardContent className="flex items-center gap-2 p-2 h-full">
+              <Target className="w-4 h-4 text-primary" />
               <div>
-                <p className="text-2xl font-bold">{completedTasks}</p>
-                <p className="text-xs text-muted-foreground">Trips Planned</p>
+                <p className="text-lg font-bold leading-tight">{completedTasks}</p>
+                <p className="text-[10px] text-muted-foreground">Trips Planned</p>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border-l-4 border-l-secondary">
-            <CardContent className="flex items-center gap-3 p-4">
-              <TrendingUp className="w-6 h-6 text-secondary" />
+          <Card className="border-l-2 border-l-secondary h-20">
+            <CardContent className="flex items-center gap-2 p-2 h-full">
+              <TrendingUp className="w-4 h-4 text-secondary" />
               <div>
-                <p className="text-2xl font-bold">{streak}</p>
-                <p className="text-xs text-muted-foreground">Day Streak</p>
+                <p className="text-lg font-bold leading-tight">{streak}</p>
+                <p className="text-[10px] text-muted-foreground">Day Streak</p>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border-l-4 border-l-accent">
-            <CardContent className="flex items-center gap-3 p-4">
-              <Star className="w-6 h-6 text-accent" />
+          <Card className="border-l-2 border-l-accent h-20">
+            <CardContent className="flex items-center gap-2 p-2 h-full">
+              <Star className="w-4 h-4 text-accent" />
               <div>
-                <p className="text-2xl font-bold">{xpPoints}</p>
-                <p className="text-xs text-muted-foreground">XP Points</p>
+                <p className="text-lg font-bold leading-tight">{xpPoints}</p>
+                <p className="text-[10px] text-muted-foreground">XP Points</p>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border-l-4 border-l-chart-4">
-            <CardContent className="flex items-center gap-3 p-4">
-              <Trophy className="w-6 h-6 text-chart-4" />
+          <Card className="border-l-2 border-l-chart-4 h-20">
+            <CardContent className="flex items-center gap-2 p-2 h-full">
+              <Trophy className="w-4 h-4 text-chart-4" />
               <div>
-                <p className="text-2xl font-bold">Lvl {userLevel}</p>
-                <p className="text-xs text-muted-foreground">Travel Expert</p>
+                <p className="text-lg font-bold leading-tight">Lvl {userLevel}</p>
+                <p className="text-[10px] text-muted-foreground">Travel Expert</p>
               </div>
             </CardContent>
           </Card>
@@ -325,7 +325,9 @@ export function TripPlannerDashboard() {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <ChatInterface onItineraryGenerated={handleChatItinerary} />
+              <div className="w-full">
+                <ChatInterface onItineraryGenerated={handleChatItinerary} heightClass="h-[600px] md:h-[700px]" />
+              </div>
             </div>
           </TabsContent>
 

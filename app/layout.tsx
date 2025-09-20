@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   title: "YatrIQ - AI Travel Planner",
   description:
     "Your intelligent travel companion powered by AI. Plan perfect trips with personalized itineraries, budget tracking, and real-time insights.",
-  generator: "v0.app",
 }
 
 export default function RootLayout({

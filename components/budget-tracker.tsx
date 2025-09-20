@@ -47,41 +47,9 @@ interface BudgetTrackerProps {
 }
 
 export function BudgetTracker({ totalBudget = 2000, itineraryCost = 0 }: BudgetTrackerProps) {
-  const [categories, setCategories] = useState<BudgetCategory[]>([
-    { id: "1", name: "Transportation", allocated: 600, spent: 450, color: "bg-chart-1", icon: "✈️" },
-    { id: "2", name: "Accommodation", allocated: 800, spent: 720, color: "bg-chart-2", icon: "🏨" },
-    { id: "3", name: "Food & Dining", allocated: 400, spent: 280, color: "bg-chart-3", icon: "🍽️" },
-    { id: "4", name: "Activities", allocated: 300, spent: 150, color: "bg-chart-4", icon: "🎯" },
-    { id: "5", name: "Shopping", allocated: 200, spent: 85, color: "bg-chart-5", icon: "🛍️" },
-    { id: "6", name: "Emergency", allocated: 200, spent: 0, color: "bg-muted", icon: "🚨" },
-  ])
+  const [categories, setCategories] = useState<BudgetCategory[]>([])
 
-  const [expenses, setExpenses] = useState<Expense[]>([
-    {
-      id: "1",
-      category: "Transportation",
-      amount: 450,
-      description: "Flight tickets",
-      date: "2024-01-15",
-      type: "actual",
-    },
-    {
-      id: "2",
-      category: "Accommodation",
-      amount: 720,
-      description: "Hotel booking",
-      date: "2024-01-16",
-      type: "actual",
-    },
-    {
-      id: "3",
-      category: "Food & Dining",
-      amount: 280,
-      description: "Restaurant meals",
-      date: "2024-01-17",
-      type: "actual",
-    },
-  ])
+  const [expenses, setExpenses] = useState<Expense[]>([])
 
   const [newExpense, setNewExpense] = useState({
     category: "",
